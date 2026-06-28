@@ -1,0 +1,17 @@
+/*Problem Description:
+
+You are a Data Engineer monitoring daily row count snapshots of warehouse tables. A sudden decrease in row count between two consecutive days could indicate a truncation, accidental delete, or broken partition. For each table, show the day-over-day row count change and flag any row-count shrinkage.
+
+The result must contain the following columns:
+
+table_name
+snapshot_date
+row_count
+prev_row_count - previous day's row count (NULL for first snapshot)
+row_diff - row_count - prev_row_count (NULL for first snapshot)
+status - 'Baseline' for the first day, 'SHRINK ALERT' if row count decreased, 'Growing' otherwise
+Requirements
+Use LAG(row_count) OVER (PARTITION BY table_name ORDER BY snapshot_date) for prev_row_count
+Compute row_diff as the arithmetic difference
+Apply a 3-way CASE for status
+Sort by table_name ascending, then snapshot_date ascending */
