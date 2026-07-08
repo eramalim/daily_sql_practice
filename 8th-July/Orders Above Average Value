@@ -1,0 +1,10 @@
+/*Problem Description:
+
+You are a Data Analyst at an online store. The finance team wants to identify all orders where the order value is above the overall average order value - these are high-value orders worth tracking for customer relationship management.
+
+The result must contain the following columns:
+
+order_id
+customer_name
+product_name
+order_value*/
