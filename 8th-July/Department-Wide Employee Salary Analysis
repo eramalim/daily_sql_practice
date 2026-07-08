@@ -1,0 +1,12 @@
+/*Problem Description:
+
+TCS wants to analyze salary distribution across departments. For each department, calculate:
+
+Total number of employees
+Average salary
+Minimum salary
+Maximum salary
+Salary range (max - min)
+Number of employees earning above department average
+Only include departments with at least 5 employees. Output columns: department, employee_count, avg_salary, min_salary, max_salary, salary_range, above_avg_count. Sort by avg_salary DESC.*/
+
