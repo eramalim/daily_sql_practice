@@ -8,3 +8,13 @@ order_id
 customer_name
 product_name
 order_value*/
+
+
+select order_id,
+customer_name,
+product_name,
+order_value 
+from shop_orders
+where order_value >
+(select avg(order_value) from shop_orders)
+order by order_value desc
