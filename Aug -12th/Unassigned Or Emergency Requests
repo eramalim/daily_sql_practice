@@ -1,0 +1,13 @@
+/*Problem Description:
+
+A home services company (plumbing & HVAC) wants a daily worklist for dispatch: any job request that hasn't been assigned
+a technician yet, plus any request marked as emergency priority regardless of assignment status, since both need immediate attention.*/
+
+select customer_name,
+service_type,
+priority,
+technician_id,
+request_date from job_requests
+where technician_id is NULL Or
+priority = 'Emergency'
+order by request_date asc
